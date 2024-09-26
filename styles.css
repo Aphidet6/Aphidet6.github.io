@@ -1,15 +1,43 @@
 .header__nav--bg {
     background-color: #004AAD;
 }
-.navbar-shrink {
-    transition: all 0.3s ease-in-out; /* เพิ่ม animation เพื่อให้การเปลี่ยนแปลงนุ่มนวล */
-  }
-  
-  .scrolled {
-    background-color: #fff; /* เปลี่ยนสีพื้นหลังเมื่อเลื่อน */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเล็กน้อย */
-    padding: 10px 0; /* ปรับระยะห่างภายใน */
-  }
+/*.carousel-item {
+    height: 700px;  กำหนดความสูงตามที่คุณต้องการ 
+}
+
+/* ทำให้ภาพปรับให้เต็มบล็อกและอยู่กึ่งกลาง 
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}*/
+.carousel-item {
+    height: 700px;  /* กำหนดความสูงคงที่ */
+    position: relative;  /* เพื่อให้ภาพอยู่ในกรอบ */
+    overflow: hidden;    /* ทำให้ภาพไม่ล้นออกจากกรอบ */
+}
+
+/* ทำให้ภาพเต็มบล็อกในขนาดปกติ */
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease; /* เพิ่ม transition เพื่อให้การเปลี่ยนแปลงภาพนุ่มนวล */
+}
+
+/* เมื่อวางเมาส์บนภาพ */
+.carousel-item:hover img {
+    transform: scale(1.1);  /* ขยายภาพเล็กน้อยโดยไม่เปลี่ยนกรอบ carousel */
+    object-fit: cover;  /* ยังคงให้ภาพถูกครอบแบบปกติ */
+}
+
+
+/* กำหนดให้ข้อความอยู่กึ่งกลางในแนวตั้ง */
+.carousel-caption {
+    bottom: 50px;
+}
 .product-card {
     border: 1px solid #ddd;
     border-radius: 10px;
