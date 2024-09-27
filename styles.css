@@ -1,21 +1,12 @@
 .header__nav--bg {
     background-color: #004AAD;
 }
-/*.carousel-item {
-    height: 700px;  กำหนดความสูงตามที่คุณต้องการ 
-}
 
-/* ทำให้ภาพปรับให้เต็มบล็อกและอยู่กึ่งกลาง 
-.carousel-item img {
-    object-fit: cover;
-    object-position: center;
-    height: 100%;
-    width: 100%;
-}*/
 .carousel-item {
-    height: 700px;  /* กำหนดความสูงคงที่ */
+    max-height: 900px;  /* กำหนดความสูงคงที่ */
     position: relative;  /* เพื่อให้ภาพอยู่ในกรอบ */
     overflow: hidden;    /* ทำให้ภาพไม่ล้นออกจากกรอบ */
+    
 }
 
 /* ทำให้ภาพเต็มบล็อกในขนาดปกติ */
@@ -68,7 +59,7 @@
     background-color: #003C8B; /* สีที่เข้มขึ้นเมื่อ hover */
     border-color: #003C8B;
   }
-  
+
 /* Center single column items on small screens */
 @media (max-width: 575px) {
     .col-12 {
