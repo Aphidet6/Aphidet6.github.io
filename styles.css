@@ -1,3 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* สีฟ้าอ่อน */
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.breadcrumb {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #007BFF; /* สีฟ้า */
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.product-image {
+    flex: 1;
+    padding-right: 20px;
+    overflow: hidden; /* ป้องกันภาพหลุดออกจากขอบ */
+    position: relative;
+}
+.product-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+.thumbnail-images {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.thumbnail-images img {
+    width: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.product-details {
+    flex: 1;
+    padding-left: 20px;
+}
+h1 {
+    color: #007BFF;
+    margin: 0;
+}
+.price {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+.sku {
+    font-size: 14px;
+    color: #888;
+}
+.quantity-section {
+    margin: 20px 0;
+}
+.quantity-section input {
+    width: 40px;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.button-secondary {
+    background-color: #FF6347;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.button-secondary:hover {
+    background-color: #e0523f;
+}
+.store-info {
+    color: green;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.delivery-info {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .product-image, .product-details {
+        padding: 0;
+    }
+}
 .header__nav--bg {
     background-color: #004AAD;
 }

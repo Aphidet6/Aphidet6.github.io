@@ -18,7 +18,7 @@
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/index.html">
                 <img src="images/icon-title.png" alt="logo" width="80" height="80">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -68,5 +68,60 @@
         </div>
     </nav>
     
+    <div class="container">
+        <div class="product-image">
+            <div class="breadcrumb">
+                <a href="#">หน้าแรก</a> > <a href="#">สินค้าทั้งหมด</a> > <a href="#">ปลากัดหางยาว HALF MOON</a> > Half Moon COPPER
+            </div>
+            <img id="mainImage" src="/images/blue-betta.jpg" alt="Half Moon COPPER">
+            <div class="thumbnail-images">
+                <img src="/images/blue-betta.jpg" alt="Thumbnail 1" onclick="changeImage('/images/blue-betta.jpg', 1)">
+                <img src="/images/images-detail/blue-betta-2.jpg" alt="Thumbnail 2" onclick="changeImage('/images/images-detail/blue-betta-2.jpg', -1)">
+                <img src="/images/images-detail/blue-betta-3.jpg" alt="Thumbnail 3" onclick="changeImage('/images/images-detail/blue-betta-3.jpg', 1)">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>Half Moon COPPER</h1>
+            <div class="sku">รหัสสินค้า SKU-19518</div>
+            <div class="price">100.00 บาท</div>
+            <div class="quantity-section">
+                <label for="quantity">จำนวน (ชิ้น): </label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <a href="#" class="button">ซื้อเลย</a>
+            <a href="#" class="button button-secondary">หยิบลงตะกร้า</a>
+            
+            <div class="delivery-info">
+                สถานะสินค้า: พร้อมส่ง <br>
+                ระยะเวลาจัดเตรียมสินค้า: 3 วัน
+            </div>
+            <div class="social-icons">
+                <img src="facebook_icon.png" alt="Facebook">
+                <img src="messenger_icon.png" alt="Messenger">
+                <img src="line_icon.png" alt="LINE">
+            </div>
+        </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function changeImage(imageSrc, direction) {
+            const mainImage = document.getElementById('mainImage');
+            
+            // ทำให้ภาพเลื่อนออกไปก่อน
+            mainImage.style.transform = `translateX(${direction * 100}%)`;
+            
+            // หลังจาก 500ms ให้เปลี่ยนภาพแล้วทำให้เลื่อนกลับมา
+            setTimeout(() => {
+                mainImage.src = imageSrc;
+                mainImage.style.transform = `translateX(${-direction * 100}%)`; // ทำให้ภาพใหม่เลื่อนเข้ามาจากด้านตรงข้าม
+                setTimeout(() => {
+                    mainImage.style.transform = `translateX(0)`; // ปรับตำแหน่งกลับมาเป็น 0
+                }, 100); // หน่วงเวลาการเปลี่ยนภาพใหม่
+            }, 500); // ระยะเวลาของการเลื่อนภาพออกไป
+        }
+    </script>
+    
+
 </html>
