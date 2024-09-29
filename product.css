@@ -1,0 +1,30 @@
+/* ปรับแต่งสไตล์ของ breadcrumb */
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ปรับแต่งสไตล์ของปุ่ม */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* ปรับแต่งสไตล์รูปภาพ Thumbnail */
+.thumbnail-images img {
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.thumbnail-images img:hover {
+    border-color: #007bff;
+}
