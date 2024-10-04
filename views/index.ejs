@@ -19,9 +19,12 @@
         <!-- Custom JS for Dark Mode -->
         <script>
           document.getElementById('darkModeToggle').addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-            this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
-          });
+    console.log("Dark Mode toggle clicked"); // ตรวจสอบว่าปุ่มถูกกดแล้ว
+    document.body.classList.toggle('dark-mode');
+    console.log("Dark Mode active: ", document.body.classList.contains('dark-mode')); // ตรวจสอบสถานะ dark-mode
+    this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+});
+
         </script>
 
     <div class="container-xxl">

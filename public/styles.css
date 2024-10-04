@@ -44,8 +44,8 @@
 .carousel-item img {
     object-fit: cover;
     object-position: center;
-    height: 500px;
-    width: 1000px;
+    height: 100%;
+    width: 100%;
     transition: transform 0.5s ease; /* เพิ่ม transition เพื่อให้การเปลี่ยนแปลงภาพนุ่มนวล */
 }
 
@@ -100,9 +100,9 @@
 }
 
 .dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
+    background-color: #333 !important; /* บังคับใช้สไตล์ด้วย !important */
+    color: #fff !important;
+}
   .dark-mode a {
     color: #ddd;
   }
