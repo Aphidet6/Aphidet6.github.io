@@ -102,6 +102,12 @@
 .dark-mode {
     background-color: #333 !important; /* บังคับใช้สไตล์ด้วย !important */
     color: #fff !important;
+    nav {
+        background-color: #333;
+    }
+    nav a {
+        color: #ddd;
+    }
 }
   .dark-mode a {
     color: #ddd;
