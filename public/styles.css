@@ -34,7 +34,7 @@
 }
 
 .carousel-item {
-    max-height: 900px;  /* กำหนดความสูงคงที่ */
+    max-height: 500px;  /* กำหนดความสูงคงที่ */
     position: relative;  /* เพื่อให้ภาพอยู่ในกรอบ */
     overflow: hidden;    /* ทำให้ภาพไม่ล้นออกจากกรอบ */
     
