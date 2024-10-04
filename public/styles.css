@@ -44,7 +44,7 @@
 .carousel-item img {
     object-fit: cover;
     object-position: center;
-    height: 100%;
+    height: 500px;
     width: 1000px;
     transition: transform 0.5s ease; /* เพิ่ม transition เพื่อให้การเปลี่ยนแปลงภาพนุ่มนวล */
 }
