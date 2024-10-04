@@ -6,10 +6,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // ตั้งค่า path ของโฟลเดอร์ที่เก็บไฟล์ EJS
 
+const port = process.env.PORT || 5000;
+
 // ใช้ไฟล์สไตล์ และรูปภาพจากโฟลเดอร์ public
 app.use(express.static(path.join(__dirname, 'public')));
-
-const PORT = process.evn.PORT || 5000;
 
 // กำหนด route สำหรับหน้าเว็บหลัก
 app.get('/', (req, res) => {
@@ -42,6 +42,6 @@ app.get('/Half_Moon-SUPER-BLACK', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+  });
