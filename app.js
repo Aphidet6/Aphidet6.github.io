@@ -114,7 +114,7 @@ app.get('/Half_Moon-PK-CROWN-TAIL-FANCY', (req, res) => {
         mainImage: '/images/CT FANCY.jpg',
         Thumbnail1: '/images/CT FANCY.jpg',
         Thumbnail2: '/images/images-detail/CT FANCY-2.jpg',
-        Thumbnail3: '/images/images-detail/CT FANCY-.jpg',
+        Thumbnail3: '/images/images-detail/CT FANCY-3.jpg',
         PKC: 'HMCT : 01',
         price: '500'
     });
