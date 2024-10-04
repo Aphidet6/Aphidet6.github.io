@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname, 'views')); // ตั้งค่า path �
 // ใช้ไฟล์สไตล์ และรูปภาพจากโฟลเดอร์ public
 app.use(express.static(path.join(__dirname, 'public')));
 
-let PORT = process.evn.PORT || 5000;
+const PORT = process.evn.PORT || 5000;
 
 // กำหนด route สำหรับหน้าเว็บหลัก
 app.get('/', (req, res) => {
