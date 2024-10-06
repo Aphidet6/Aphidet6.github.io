@@ -13,12 +13,12 @@ const port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ตั้งค่า express-session
-app.use(session({
-    secret: '15915963Za', // เปลี่ยนเป็น secret ที่คุณต้องการ
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true } // ใช้ true ถ้าคุณใช้ HTTPS
-}));
+// app.use(session({
+ //   secret: '15915963Za', // เปลี่ยนเป็น secret ที่คุณต้องการ
+   // resave: false,
+   // saveUninitialized: true,
+   // cookie: { secure: true } // ใช้ true ถ้าคุณใช้ HTTPS
+// }));
 
 // Middleware เพื่อจัดการการส่งข้อมูลจากฟอร์ม
 app.use(express.urlencoded({ extended: true })); // ใช้สำหรับการรับข้อมูลจากฟอร์ม
