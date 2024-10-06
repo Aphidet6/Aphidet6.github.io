@@ -11,206 +11,205 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="/images/icon-title.png" alt="logo" width="80" height="80">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <div class="container-xxl">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="/images/icon-title.png" alt="logo" width="80" height="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Product
-            </a>
-            <ul class="dropdown-menu">
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Half Moon</a></li>
-                    <li><a class="dropdown-item" href="#">Dragon</a></li>
-                    <li><a class="dropdown-item" href="#">Crown Tail</a></li>
-                    <li><a class="dropdown-item" href="#">Dumbo</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#all-product">All Product</a></li>
-                  </ul>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Half Moon</a></li>
+                <li><a class="dropdown-item" href="#">Dragon</a></li>
+                <li><a class="dropdown-item" href="#">Crown Tail</a></li>
+                <li><a class="dropdown-item" href="#">Dumbo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#all-product">All Product</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Search</button>
           </form>
           <ul class="navbar-nav  mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link ms-2" href="cart.html" target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                          class="bi bi-cart3" viewBox="0 0 16 16">
-                          <path
-                              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                      </svg>
-                  </a>
-              </li>
-              <li>
-                  <button class="btn btn-outline-secondary" id="darkModeToggle">🌙 Dark Mode</button>
-              </li>
+            <li class="nav-item">
+                <a class="nav-link ms-2" href="cart.html" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2" href="#">
+                <button class="btn btn-outline-secondary" id="darkModeToggle">🌙 Dark Mode</button>
+              </a>
+            </li>
           </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators ">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner rounded">
-        <a href="/Half_Moon-PK-DUMBO-RED" target="_blank">
-            <div class="carousel-item active">
-                <img src="/images/HMPK DUMBO.png" class="d-block w-100" alt="Multi Avatar">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>HALF MOON DUMBO</h5>
-                    <p>ปลากัดที่พัฒนาสายพันธุ์มาจนหางและหูที่มีความยาวสวยงาม</p>
-                </div>
-            </div>
-        </a>
-        <a href="/Half_Moon-PK-COPPER" target="_blank">
-            <div class="carousel-item">
-                <img src="/images/copper-betta.png" class="d-block w-100" alt="Black Multi">
-                <div class="carousel-caption d-none d-md-block">
-
-                    <h5>HALF MOON COPPER</h5>
-                    <p>ปลากัดหางสั้นที่พัฒนาสีออกมาได้อย่างเงางาม</p>
-                </div>
-            </div>
-        </a>
-        <a href="/Half_Moon-PK-BLACK-DRAGON" target="_blank">
-            <div class="carousel-item">
-                <img src="images/HMPK BLACK DRAGON.png" class="d-block w-100" alt="Black Monster">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BLACK DRAGON</h5>
-                    <p>ปลากัดหางสั้นที่พัฒนาสีออกมาได้สวยงานเหมือนมังกร</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-<div id="all-product" class="container mt-4">
-    <div class="row">
-      <!-- Product Block 1 -->    
-        <div class="col-md-3 col-sm-6 col-12">
-            <a href="/Half_Moon-COPPER" class="link-offset-2 link-underline link-underline-opacity-0">
-            <div class="product-card">
-              <img src="/images/blue-betta.jpg" alt="Product 1" class="product-img">
-              <h5 class="product-name">Half Moon COPPER</h5>
-              <p class="product-price">฿120</p>
-              <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
-            </div>
-        </a>
-          </div>
-       
-      <!-- Product Block 2 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-SUPER-BLACK" class="link-offset-2 link-underline link-underline-opacity-0">
-        <div class="product-card">
-          <img src="/images/black-betta.jpg" alt="Product 2" class="product-img">
-          <h5 class="product-name">Half Moon SUPER BLACK</h5>
-          <p class="product-price">฿180</p>
-          <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
         </div>
-    </a>
       </div>
-      
-      <!-- Product Block 3 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-PK-COPPER" class="link-offset-2 link-underline link-underline-opacity-0">
-        <div class="product-card">
-          <img src="/images/copper-betta.jpg" alt="Product 3" class="product-img">
-          <h5 class="product-name">HALFMOON PLAKAD COPPER</h5>
-          <p class="product-price">฿150</p>
-          <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
-        </div>
-    </a>
+    </nav>
+  
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
       </div>
-      <!-- Product Block 4 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-PK-NEMO-GALAXY" class="link-offset-2 link-underline link-underline-opacity-0">
-        <div class="product-card">
-          <img src="/images/galaxy-betta.jpg" alt="Product 4" class="product-img">
-          <h5 class="product-name">HALFMOON PLAKAD NEMO GALAXY</h5>
-          <p class="product-price">฿200</p>
-          <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
-        </div>
-    </a>
+      <div class="carousel-inner rounded">
+          <a href="/Half_Moon-PK-DUMBO-RED" target="_blank">
+              <div class="carousel-item active">
+                  <img src="/images/HMPK DUMBO.png" class="d-block w-100" alt="Multi Avatar">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>HALF MOON DUMBO</h5>
+                      <p>ปลากัดที่พัฒนาสายพันธุ์มาจนหางและหูที่มีความยาวสวยงาม</p>
+                  </div>
+              </div>
+          </a>
+          <a href="/Half_Moon-PK-COPPER" target="_blank">
+              <div class="carousel-item">
+                  <img src="/images/copper-betta.png" class="d-block w-100" alt="Black Multi">
+                  <div class="carousel-caption d-none d-md-block">
+  
+                      <h5>HALF MOON COPPER</h5>
+                      <p>ปลากัดหางสั้นที่พัฒนาสีออกมาได้อย่างเงางาม</p>
+                  </div>
+              </div>
+          </a>
+          <a href="/Half_Moon-PK-BLACK-DRAGON" target="_blank">
+              <div class="carousel-item">
+                  <img src="images/HMPK BLACK DRAGON.png" class="d-block w-100" alt="Black Monster">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>BLACK DRAGON</h5>
+                      <p>ปลากัดหางสั้นที่พัฒนาสีออกมาได้สวยงานเหมือนมังกร</p>
+                  </div>
+              </div>
+          </a>
       </div>
-      <!-- Product Block 5 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-PK-BLACK-DRAGON" class="link-offset-2 link-underline link-underline-opacity-0">
-            <div class="product-card">
-                <img src="/images/HMPK BLACK DRAGON.jpg" alt="Product 4" class="product-img">
-                <h5 class="product-name">HALFMOON PLAKAD BLACK DRAGON</h5>
-                <p class="product-price">฿300</p>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  
+  <div id="all-product" class="container mt-4">
+      <div class="row">
+        <!-- Product Block 1 -->    
+          <div class="col-md-3 col-sm-6 col-12">
+              <a href="/Half_Moon-COPPER" class="link-offset-2 link-underline link-underline-opacity-0">
+              <div class="product-card">
+                <img src="/images/blue-betta.jpg" alt="Product 1" class="product-img">
+                <h5 class="product-name">Half Moon COPPER</h5>
+                <p class="product-price">฿120</p>
                 <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
               </div>
-        </a>
+          </a>
+            </div>
+         
+        <!-- Product Block 2 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-SUPER-BLACK" class="link-offset-2 link-underline link-underline-opacity-0">
+          <div class="product-card">
+            <img src="/images/black-betta.jpg" alt="Product 2" class="product-img">
+            <h5 class="product-name">Half Moon SUPER BLACK</h5>
+            <p class="product-price">฿180</p>
+            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+          </div>
+      </a>
         </div>
-      <!-- Product Block 6 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-PK-DUMBO-RED" class="link-offset-2 link-underline link-underline-opacity-0">
-        <div class="product-card">
-          <img src="/images/HMPK DUMBO.jpg" alt="Product 4" class="product-img">
-          <h5 class="product-name">HALFMOON PLAKAD DUMBO RED</h5>
-          <p class="product-price">฿400</p>
-          <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+        
+        <!-- Product Block 3 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-PK-COPPER" class="link-offset-2 link-underline link-underline-opacity-0">
+          <div class="product-card">
+            <img src="/images/copper-betta.jpg" alt="Product 3" class="product-img">
+            <h5 class="product-name">HALFMOON PLAKAD COPPER</h5>
+            <p class="product-price">฿150</p>
+            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+          </div>
+      </a>
         </div>
-    </a>
-      </div>
-      <!-- Product Block 7 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-PK-DUMBO-BLUE" class="link-offset-2 link-underline link-underline-opacity-0">
-        <div class="product-card">
-          <img src="/images/HMPK DUMBO BLUE.jpg" alt="Product 4" class="product-img">
-          <h5 class="product-name">HALFMOON PLAKAD DUMBO BLUE</h5>
-          <p class="product-price">฿400</p>
-          <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+        <!-- Product Block 4 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-PK-NEMO-GALAXY" class="link-offset-2 link-underline link-underline-opacity-0">
+          <div class="product-card">
+            <img src="/images/galaxy-betta.jpg" alt="Product 4" class="product-img">
+            <h5 class="product-name">HALFMOON PLAKAD NEMO GALAXY</h5>
+            <p class="product-price">฿200</p>
+            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+          </div>
+      </a>
         </div>
-    </a>
-      </div>
-      <!-- Product Block 8 -->
-      <div class="col-md-3 col-sm-6 col-12">
-        <a href="/Half_Moon-PK-CROWN-TAIL-FANCY" class="link-offset-2 link-underline link-underline-opacity-0">
-        <div class="product-card">
-          <img src="/images/CT FANCY.jpg" alt="Product 4" class="product-img">
-          <h5 class="product-name">CROWN TAIL FANCY</h5>
-          <p class="product-price">฿500</p>
-          <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+        <!-- Product Block 5 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-PK-BLACK-DRAGON" class="link-offset-2 link-underline link-underline-opacity-0">
+              <div class="product-card">
+                  <img src="/images/HMPK BLACK DRAGON.jpg" alt="Product 4" class="product-img">
+                  <h5 class="product-name">HALFMOON PLAKAD BLACK DRAGON</h5>
+                  <p class="product-price">฿300</p>
+                  <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+                </div>
+          </a>
+          </div>
+        <!-- Product Block 6 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-PK-DUMBO-RED" class="link-offset-2 link-underline link-underline-opacity-0">
+          <div class="product-card">
+            <img src="/images/HMPK DUMBO.jpg" alt="Product 4" class="product-img">
+            <h5 class="product-name">HALFMOON PLAKAD DUMBO RED</h5>
+            <p class="product-price">฿400</p>
+            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+          </div>
+      </a>
         </div>
-    </a>
+        <!-- Product Block 7 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-PK-DUMBO-BLUE" class="link-offset-2 link-underline link-underline-opacity-0">
+          <div class="product-card">
+            <img src="/images/HMPK DUMBO BLUE.jpg" alt="Product 4" class="product-img">
+            <h5 class="product-name">HALFMOON PLAKAD DUMBO BLUE</h5>
+            <p class="product-price">฿400</p>
+            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+          </div>
+      </a>
+        </div>
+        <!-- Product Block 8 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <a href="/Half_Moon-PK-CROWN-TAIL-FANCY" class="link-offset-2 link-underline link-underline-opacity-0">
+          <div class="product-card">
+            <img src="/images/CT FANCY.jpg" alt="Product 4" class="product-img">
+            <h5 class="product-name">CROWN TAIL FANCY</h5>
+            <p class="product-price">฿500</p>
+            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+          </div>
+      </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</div>  
 
 <!-- Custom JS for Dark Mode -->
 <script>
