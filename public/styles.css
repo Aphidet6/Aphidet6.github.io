@@ -109,3 +109,7 @@
   .dark-mode a {
     color: #ddd;
   }
+
+.card {
+    min-height: 340px;
+}
