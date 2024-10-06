@@ -45,14 +45,18 @@
           </form>
           <ul class="navbar-nav  mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link ms-2" href="cart.html" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                        class="bi bi-cart3" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                    </svg>
-                </a>
-            </li>
+              <a class="nav-link ms-2" href="/cart" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                      class="bi bi-cart3" viewBox="0 0 16 16">
+                      <path
+                          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                  </svg>
+                  <span class="badge bg-danger" id="cart-count">
+                      <%= req.session.cart ? req.session.cart.length : 0 %>
+                  </span>
+              </a>
+          </li>
+          
             <li class="nav-item">
               <a class="nav-link ms-2" href="#">
                 <button class="btn btn-outline-secondary" id="darkModeToggle">🌙 Dark Mode</button>
@@ -234,6 +238,61 @@ document.body.classList.toggle('dark-mode');
 console.log("Dark Mode active: ", document.body.classList.contains('dark-mode')); // ตรวจสอบสถานะ dark-mode
 this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
 });
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// ฟังก์ชันอัปเดตจำนวนในตะกร้า
+function updateCartCount() {
+  document.getElementById('cart-count').textContent = cart.length;
+}
+
+// ฟังก์ชันเพิ่มสินค้าในตะกร้า
+function addToCart(product) {
+  cart.push(product);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+  updateCartItems();
+}
+
+// ฟังก์ชันแสดงรายการสินค้าในตะกร้า
+function updateCartItems() {
+  const cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = '';
+
+  cart.forEach(item => {
+    const cartItem = document.createElement('div');
+    cartItem.textContent = `${item.name} - ฿${item.price}`;
+    cartItemsContainer.appendChild(cartItem);
+  });
+}
+
+// ฟังก์ชันเมื่อเอาเมาส์ไปวางที่ไอคอนตะกร้า
+document.getElementById('cart-icon').addEventListener('mouseover', () => {
+  document.getElementById('cart-dropdown').style.display = 'block';
+});
+
+// ฟังก์ชันเมื่อเอาเมาส์ออกจากไอคอนตะกร้า
+document.getElementById('cart-icon').addEventListener('mouseout', () => {
+  document.getElementById('cart-dropdown').style.display = 'none';
+});
+
+// ฟังก์ชันที่เรียกเมื่อหน้าโหลด
+window.onload = function() {
+  updateCartCount();
+  updateCartItems();
+};
+
+// ฟังก์ชันเมื่อกดปุ่ม "หยิบลงตะกร้า"
+document.querySelectorAll('.btn-secondary').forEach(button => {
+  button.addEventListener('click', () => {
+    const product = {
+      name: document.querySelector('.display-5').textContent, // ชื่อสินค้า
+      price: document.querySelector('.price').textContent.replace(' บาท', ''), // ราคา
+    };
+    addToCart(product);
+  });
+});
+
 </script>
 
 <!-- JavaScript Bundle with Popper -->

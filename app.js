@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const session = require('express-session'); // ติดตั้ง express-session
 const app = express();
 
 // ตั้งค่า view engine ให้เป็น EJS
@@ -10,6 +11,17 @@ const port = process.env.PORT || 5000;
 
 // ใช้ไฟล์สไตล์ และรูปภาพจากโฟลเดอร์ public
 app.use(express.static(path.join(__dirname, 'public')));
+
+// ตั้งค่า express-session
+app.use(session({
+    secret: '15915963Za', // เปลี่ยนเป็น secret ที่คุณต้องการ
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true } // ใช้ true ถ้าคุณใช้ HTTPS
+}));
+
+// Middleware เพื่อจัดการการส่งข้อมูลจากฟอร์ม
+app.use(express.urlencoded({ extended: true })); // ใช้สำหรับการรับข้อมูลจากฟอร์ม
 
 // กำหนด route สำหรับหน้าเว็บหลัก
 app.get('/', (req, res) => {
@@ -118,6 +130,33 @@ app.get('/Half_Moon-PK-CROWN-TAIL-FANCY', (req, res) => {
         PKC: 'HMCT : 01',
         price: '500'
     });
+});
+
+// Route สำหรับเพิ่มสินค้าลงในตะกร้า
+app.post('/add-to-cart', (req, res) => {
+    const { bettaName, price, quantity } = req.body;
+
+    if (!req.session.cart) {
+        req.session.cart = []; // สร้างตะกร้าใหม่หากยังไม่มี
+    }
+
+    // เพิ่มสินค้าลงในตะกร้า
+    req.session.cart.push({ bettaName, price, quantity });
+    
+    // เช็คปุ่มที่กด
+    if (req.body.action === 'buy') {
+        return res.redirect('/cart'); // เปลี่ยนไปที่หน้าตะกร้า
+    }
+    
+    // กลับไปที่หน้าผลิตภัณฑ์หลังจากหยิบลงตะกร้า
+    res.redirect('back');
+});
+
+
+// Route สำหรับหน้าแสดงผลตะกร้า
+app.get('/cart', (req, res) => {
+    const cartItems = req.session.cart || []; // ดึงข้อมูลตะกร้าสินค้า
+    res.render('cart', { cartItems }); // ส่งข้อมูลไปยัง template
 });
 
 app.listen(port, () => {
