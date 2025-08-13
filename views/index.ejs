@@ -4,15 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Earth Betta</title>
-  <!-- CSS ของ Bootstrap -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/images/icon-title.png">
 </head>
 <body>
 
-  <div class="container-xxl">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
           <img src="/images/icon-title.png" alt="logo" width="80" height="80">
@@ -46,17 +45,14 @@
           <ul class="navbar-nav  mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link ms-2" href="/cart" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                      class="bi bi-cart3" viewBox="0 0 16 16">
-                      <path
-                          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                  </svg>
-                  <span class="badge bg-danger" id="cart-count">
-                      <%= req.session.cart ? req.session.cart.length : 0 %>
-                  </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                </svg>
+                <span class="badge bg-danger" id="cart-count">
+                  0
+                </span>
               </a>
-          </li>
-          
+            </li>
             <li class="nav-item">
               <a class="nav-link ms-2" href="#">
                 <button class="btn btn-outline-secondary" id="darkModeToggle">🌙 Dark Mode</button>
@@ -66,239 +62,84 @@
         </div>
       </div>
     </nav>
-  
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators ">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
+
+    <div id="carouselExampleCaptions" class="carousel slide container-xxl" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner rounded">
-          <a href="/Half_Moon-PK-DUMBO-RED" target="_blank">
-              <div class="carousel-item active">
-                  <img src="/images/HMPK DUMBO.png" class="d-block w-100" alt="Multi Avatar">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>HALF MOON DUMBO</h5>
-                      <p>ปลากัดที่พัฒนาสายพันธุ์มาจนหางและหูที่มีความยาวสวยงาม</p>
-                  </div>
-              </div>
-          </a>
-          <a href="/Half_Moon-PK-COPPER" target="_blank">
-              <div class="carousel-item">
-                  <img src="/images/copper-betta.png" class="d-block w-100" alt="Black Multi">
-                  <div class="carousel-caption d-none d-md-block">
-  
-                      <h5>HALF MOON COPPER</h5>
-                      <p>ปลากัดหางสั้นที่พัฒนาสีออกมาได้อย่างเงางาม</p>
-                  </div>
-              </div>
-          </a>
-          <a href="/Half_Moon-PK-BLACK-DRAGON" target="_blank">
-              <div class="carousel-item">
-                  <img src="images/HMPK BLACK DRAGON.png" class="d-block w-100" alt="Black Monster">
-                  <div class="carousel-caption d-none d-md-block">
-                      <h5>BLACK DRAGON</h5>
-                      <p>ปลากัดหางสั้นที่พัฒนาสีออกมาได้สวยงานเหมือนมังกร</p>
-                  </div>
-              </div>
-          </a>
+      <div class="carousel-inner">
+        <a href="/Half_Moon-PK-DUMBO-RED" target="_blank">
+          <div class="carousel-item active">
+            <img src="/images/HMPK DUMBO.png" class="d-block w-100" alt="Multi Avatar">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>HALF MOON DUMBO</h5>
+              <p>ปลากัดที่พัฒนาสายพันธุ์มาจนหางและหูที่มีความยาวสวยงาม</p>
+            </div>
+          </div>
+        </a>
+        <a href="/Half_Moon-PK-BLACK-DRAGON" target="_blank">
+          <div class="carousel-item">
+            <img src="/images/HMPK BLACK DRAGON.png" class="d-block w-100" alt="Multi Avatar">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>HALF MOON BLACK DRAGON</h5>
+              <p>ปลากัดที่พัฒนาสายพันธุ์มาจนมีสีสันเหมือนมังกร</p>
+            </div>
+          </div>
+        </a>
+        <a href="/Half_Moon-PK-COPPER" target="_blank">
+          <div class="carousel-item">
+            <img src="/images/copper-betta.png" class="d-block w-100" alt="Multi Avatar">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>HALF MOON COPPER</h5>
+              <p>ปลากัดที่พัฒนาสายพันธุ์มาจนสีเหลือบ ๆ เหมือนทองแดง</p>
+            </div>
+          </div>
+        </a>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
       </button>
-  </div>
-  
-  <div id="all-product" class="container mt-4">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-      
-      <!-- Product Block 1 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-COPPER" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/blue-betta.jpg" alt="Half Moon COPPER" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Half Moon COPPER</h5>
-              <p class="card-text text-danger">฿120</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Product Block 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-SUPER-BLACK" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/black-betta.jpg" alt="Half Moon SUPER BLACK" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Half Moon SUPER BLACK</h5>
-              <p class="card-text text-danger">฿180</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Product Block 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-PK-COPPER" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/copper-betta.jpg" alt="HALFMOON PLAKAD COPPER" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">HALFMOON PLAKAD COPPER</h5>
-              <p class="card-text text-danger">฿150</p>
-            </div>
-          </a>
-        </div>
-      </div>
-  
-      <!-- Product Block 4 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-PK-NEMO-GALAXY" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/galaxy-betta.jpg" alt="HALFMOON PLAKAD NEMO GALAXY" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">HALFMOON PLAKAD NEMO GALAXY</h5>
-              <p class="card-text text-danger">฿200</p>
-            </div>
-          </a>
-        </div>
-      </div>
-  
-      <!-- Product Block 5 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-PK-BLACK-DRAGON" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/HMPK BLACK DRAGON.jpg" alt="HALFMOON PLAKAD BLACK DRAGON" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">HALFMOON PLAKAD BLACK DRAGON</h5>
-              <p class="card-text text-danger">฿300</p>
-            </div>
-          </a>
-        </div>
-      </div>
-  
-      <!-- Product Block 6 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-PK-DUMBO-RED" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/HMPK DUMBO.jpg" alt="HALFMOON PLAKAD DUMBO RED" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">HALFMOON PLAKAD DUMBO RED</h5>
-              <p class="card-text text-danger">฿400</p>
-            </div>
-          </a>
-        </div>
-      </div>
-  
-      <!-- Product Block 7 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-PK-DUMBO-BLUE" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/HMPK DUMBO BLUE.jpg" alt="HALFMOON PLAKAD DUMBO BLUE" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">HALFMOON PLAKAD DUMBO BLUE</h5>
-              <p class="card-text text-danger">฿400</p>
-            </div>
-          </a>
-        </div>
-      </div>
-  
-      <!-- Product Block 8 -->
-      <div class="col">
-        <div class="card h-100">
-          <a href="/Half_Moon-PK-CROWN-TAIL-FANCY" class="link-offset-2 link-underline link-underline-opacity-0">
-            <img src="/images/CT FANCY.jpg" alt="CROWN TAIL FANCY" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">CROWN TAIL FANCY</h5>
-              <p class="card-text text-danger">฿500</p>
-            </div>
-          </a>
-        </div>
-      </div>
-  
     </div>
-  </div>
-  
-</div>  
 
-<!-- Custom JS for Dark Mode -->
-<script>
-document.getElementById('darkModeToggle').addEventListener('click', function () {
-console.log("Dark Mode toggle clicked"); // ตรวจสอบว่าปุ่มถูกกดแล้ว
-document.body.classList.toggle('dark-mode');
-console.log("Dark Mode active: ", document.body.classList.contains('dark-mode')); // ตรวจสอบสถานะ dark-mode
-this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
-});
+    <!-- Product Section -->
+    <div id="all-product" class="container my-4">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <% products.forEach(product => { %>
+          <div class="col">
+            <div class="card h-100">
+              <a href="<%= product.route %>" class="link-offset-2 link-underline link-underline-opacity-0">
+                <img src="<%= product.mainImage %>" alt="<%= product.mainImage %>" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title"><%= product.bettaName %></h5>
+                  <p class="card-text text-danger">฿<%= product.price %></p>
+                </div>
+              </a>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
 
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  </div>  
 
-// ฟังก์ชันอัปเดตจำนวนในตะกร้า
-function updateCartCount() {
-  document.getElementById('cart-count').textContent = cart.length;
-}
+  <!-- Custom JS for Dark Mode -->
+  <script>
+    document.getElementById('darkModeToggle').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+      this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
 
-// ฟังก์ชันเพิ่มสินค้าในตะกร้า
-function addToCart(product) {
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
-  updateCartItems();
-}
-
-// ฟังก์ชันแสดงรายการสินค้าในตะกร้า
-function updateCartItems() {
-  const cartItemsContainer = document.getElementById('cart-items');
-  cartItemsContainer.innerHTML = '';
-
-  cart.forEach(item => {
-    const cartItem = document.createElement('div');
-    cartItem.textContent = `${item.name} - ฿${item.price}`;
-    cartItemsContainer.appendChild(cartItem);
-  });
-}
-
-// ฟังก์ชันเมื่อเอาเมาส์ไปวางที่ไอคอนตะกร้า
-document.getElementById('cart-icon').addEventListener('mouseover', () => {
-  document.getElementById('cart-dropdown').style.display = 'block';
-});
-
-// ฟังก์ชันเมื่อเอาเมาส์ออกจากไอคอนตะกร้า
-document.getElementById('cart-icon').addEventListener('mouseout', () => {
-  document.getElementById('cart-dropdown').style.display = 'none';
-});
-
-// ฟังก์ชันที่เรียกเมื่อหน้าโหลด
-window.onload = function() {
-  updateCartCount();
-  updateCartItems();
-};
-
-// ฟังก์ชันเมื่อกดปุ่ม "หยิบลงตะกร้า"
-document.querySelectorAll('.btn-secondary').forEach(button => {
-  button.addEventListener('click', () => {
-    const product = {
-      name: document.querySelector('.display-5').textContent, // ชื่อสินค้า
-      price: document.querySelector('.price').textContent.replace(' บาท', ''), // ราคา
-    };
-    addToCart(product);
-  });
-});
-
-</script>
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
